@@ -29,6 +29,8 @@ int _printf(const char *format, ...)
 				printed_counter = print_integer(arguments, printed_counter);
 			else if (format[string_counter] == 'b')
 				printed_counter = print_binary(arguments, printed_counter);
+			else if (format[string_counter] == 'r')
+				printed_counter = reverse_string(arguments, printed_counter);
 			else if (format[string_counter] == 'u' || format[string_counter] == 'o'
 			|| format[string_counter] == 'x' || format[string_counter] == 'X')
 				printed_counter = b_se(arguments, printed_counter, format[string_counter]);
