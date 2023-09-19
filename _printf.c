@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 /**
  * _printf - produces output at standard output
  * Description: produces output according to a format
@@ -9,16 +9,16 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	int string_counter, printed_counter = 0;
+	int string_counter = 0, printed_counter = 0;
 
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
 	return (-1);
-	for (string_counter = 0; format[string_counter]; string_counter++)
+	while (format[string_counter])
 	{
 		if (format[string_counter] == '%')
 		{
-			string_counter += 1;
+			string_counter++;
 			if (format[string_counter] == 'c')
 				printed_counter = print_char(arguments, printed_counter);
 			else if (format[string_counter] == 's')
@@ -38,8 +38,8 @@ int _printf(const char *format, ...)
 			_putchar(format[string_counter]);
 			printed_counter++;
 		}
+		string_counter++;
 	}
 	va_end(arguments);
-
 	return (printed_counter);
 }
