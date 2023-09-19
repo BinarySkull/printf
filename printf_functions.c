@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_character - prints a character
+ * print_char - prints a character
  * Description: print a single character and send the number of bytes written
  * @arguments: a signle char
  * @printed_counter: number of the printed characters
@@ -9,12 +9,12 @@
 int print_char(va_list arguments, int printed_counter)
 {
 	_putchar(va_arg(arguments, int));
-	printed_counter = printed_counter + 1;
+	printed_counter++;
 	return (printed_counter);
 }
 
 /**
- * print_string - prints a string
+ * print_str - prints a string
  * Description: print a string and send the number of bytes written
  * @arguments: a pointer to string
  * @printed_counter: number of printed characters
@@ -25,10 +25,10 @@ int print_str(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	string_buffer = va_arg(arguments, char *);
-	if (string_buffer == NULL)
+	if (!string_buffer)
 	string_buffer = "(null)";
 	_puts(string_buffer);
-	printed_counter = printed_counter + _strlen(string_buffer);
+	printed_counter += _strlen(string_buffer);
 	return (printed_counter);
 }
 
@@ -58,7 +58,7 @@ int print_unknown(char a, char b, int printed_counter)
 {
 	_putchar(a);
 	_putchar(b);
-	printed_counter = printed_counter + 2;
+	printed_counter += 2;
 	return (printed_counter);
 }
 
@@ -80,7 +80,7 @@ int print_integer(va_list arguments, int printed_counter)
 	{
 	sprintf(string_buffer, "%d", number_buffer);
 	_puts(string_buffer);
-	printed_counter = printed_counter + _strlen(string_buffer);
+	printed_counter += _strlen(string_buffer);
 	}
 	free(string_buffer);
 	return (printed_counter);
