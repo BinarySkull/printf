@@ -38,5 +38,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(arguments);
+
 	return (printed_counter);
 }

@@ -25,6 +25,6 @@ void _puts(char *str)
 {
 	unsigned int counter_str;
 
-	for (counter_str;str[counter_str] != 0; counter_str++)
+	for (counter_str = 0; str[counter_str] != 0; counter_str++)
 		_putchar(str[counter_str]);
 }
