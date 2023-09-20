@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 /* LIBRARIES */
 #include <stdarg.h>
 #include <stdlib.h>
