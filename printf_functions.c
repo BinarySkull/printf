@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_char - prints a character
  * Description: print a single character and send the number of bytes written
