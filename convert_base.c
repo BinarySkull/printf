@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * binary_converter - convert to binary
  * Description: convert unsigned int to binary string
