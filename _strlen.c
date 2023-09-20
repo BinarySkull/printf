@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strlen - calulate the length of string
  * Description: it calulate the string passed to _puts
