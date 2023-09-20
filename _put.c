@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _putchar - prints a character
  * Description: print a single character and send number of bytes written
